@@ -10,8 +10,9 @@ export class CatsController {
     }
 
     @Get(':id')
-    find(@Param('id') id){
-        return id;
+    find(@Param() params):string{
+        console.log(params.id);
+        return `This action returns a #${params.id} cat`;
     }
 
 }
